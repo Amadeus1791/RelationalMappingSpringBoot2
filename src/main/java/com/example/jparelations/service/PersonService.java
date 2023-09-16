@@ -7,6 +7,8 @@ import com.example.jparelations.repo.PersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PersonService {
     @Autowired
@@ -21,6 +23,15 @@ public class PersonService {
 //        }
         return personRepo.save(person);
     }
+
+//    public Person addAddressToPerson(Long addressId, Long personId ) {
+//        Optional<Person> byId = personRepo.findById(personId);
+//        if (byId.isEmpty()) {
+//            throw new IllegalArgumentException();
+//        }
+//        Person person = byId.get();
+//        person.set
+//    }
 
 
     public void deleteAllPersons() {

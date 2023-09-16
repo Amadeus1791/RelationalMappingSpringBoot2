@@ -11,13 +11,13 @@ import java.util.Optional;
 @Service
 public class AddressService {
     @Autowired
-    AddressRepo addressRepo;
+    private AddressRepo addressRepo;
 
     @Autowired
-    PersonRepo personRepo;
+    private PersonRepo personRepo;
 
     public Address addAddress(Address address) {
-        personRepo.save(address.getPerson());
+       // personRepo.save(address.getPerson());
        return addressRepo.save(address);
     }
 
